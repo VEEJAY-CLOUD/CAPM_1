@@ -1,0 +1,2 @@
+###
+GET http://localhost:4007/odata/v4/school/Students
