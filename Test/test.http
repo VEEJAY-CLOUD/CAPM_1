@@ -8,12 +8,12 @@ GET http://localhost:4006/odata/v4/school/Stud_Mark(student_id='1001',subject='E
 GET http://localhost:4006/odata/v4/school/Stud_Mark?$filter=student_id eq '1001'
 
 ###
-POST http://localhost:4006/odata/v4/school/Students
+POST http://localhost:4004/odata/v4/school/Students
 Content-Type: application/json
 
  {
-    "student_id": "2001",
-    "student_name": "HIMA"
+    "student_id": "1004",
+    "student_name": "HIMABINDU"
 }
 
 ###

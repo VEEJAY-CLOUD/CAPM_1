@@ -12,3 +12,8 @@ entity studentsMarks{
     key subject: String;
         Marks:Integer;
 }
+
+entity studentsFees{
+    key student_id: String;     //5000
+        fees_paid: Boolean;
+}
