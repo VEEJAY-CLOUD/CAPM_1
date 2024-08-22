@@ -5,7 +5,13 @@ GET http://localhost:4006/odata/v4/school/Students
 GET http://localhost:4006/odata/v4/school/Stud_Mark(student_id='1001',subject='English')
 
 ###
+GET http://localhost:4006/odata/v4/school/Students?$filter=student_id eq '1001'
+
+###
 GET http://localhost:4006/odata/v4/school/Stud_Mark?$filter=student_id eq '1001'
+
+###
+GET http://localhost:4006/odata/v4/school/stud_Fees?$filter=student_id eq '1001'
 
 ###
 POST http://localhost:4004/odata/v4/school/Students
@@ -27,6 +33,42 @@ Content-Type: application/json
     "student_name": "BINDU"
 }
 
-
 ###
 DELETE http://localhost:4006/odata/v4/school/Students(student_id='2001')
+
+###
+POST http://localhost:4004/odata/v4/school/EmployeeAttendance
+Content-Type: application/json
+
+ {
+    "employee_id" : "emp1001",
+    "todaysdate": "2024-08-09"
+}
+
+###
+GET http://localhost:4004/odata/v4/school/CompleteStudentInfo(student_id='1001')
+
+###
+POST http://localhost:4004/odata/v4/school/staff
+Content-Type: application/json
+
+ {
+    "staff_name" : "VEEJAY" 
+}
+
+###
+PATCH http://localhost:4004/odata/v4/school/staff(ID=e7e9975b-9434-4f75-b136-7dd1a0e3c12a)
+Content-Type: application/json
+
+ {
+    "staff_name": "BINDU"
+}
+
+###
+DELETE http://localhost:4004/odata/v4/school/SalesOrderheader(order_id='1001')
+
+###
+DELETE http://localhost:4004/odata/v4/school/SalesOrderItem(order_id='1002',ordered_item_id='20')
+
+
+ 
